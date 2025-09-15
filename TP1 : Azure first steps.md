@@ -41,6 +41,14 @@ The key's randomart image is:
 
 🌞 Configurer un agent SSH sur votre poste
 
+- détaillez-moi toute la conf ici que vous aurez fait
+
+```  
+$ Start-Service ssh-agent
+$ ssh-add C:\Users\antoi\.ssh\cloud_tp1
+Enter passphrase for C:\Users\antoi\.ssh\cloud_tp1:
+Identity added: C:\Users\antoi\.ssh\cloud_tp1 (tpleo)
+```
 II. Spawn des VMs
 
 1. Depuis la WebUI
