@@ -18,13 +18,13 @@ I. Prérequis
 ```
 $ ssh-keygen -t ed25519 -C "tpleo"
 Generating public/private ed25519 key pair.
-Enter file in which to save the key (C:\Users\antoi/.ssh/id_ed25519): cloud_tp1
+Enter file in which to save the key (C:\Users\hugoc/.ssh/id_ed25519): cloud_tp1
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 Your identification has been saved in cloud_tp1
 Your public key has been saved in cloud_tp1.pub
 The key fingerprint is:
-SHA256:GGJ0**************************I tpleo
+SHA256:9***********************************9Q8 tpleo
 The key's randomart image is:
 +--[ED25519 256]--+
 |     ***   ***    |
@@ -45,9 +45,9 @@ The key's randomart image is:
 
 ```  
 $ Start-Service ssh-agent
-$ ssh-add C:\Users\antoi\.ssh\cloud_tp1
-Enter passphrase for C:\Users\antoi\.ssh\cloud_tp1:
-Identity added: C:\Users\antoi\.ssh\cloud_tp1 (tpleo)
+$ ssh-add C:\Users\hugoc\.ssh\cloud_tp1
+Enter passphrase for C:\Users\hugoc\.ssh\cloud_tp1:
+Identity added: C:\Users\hugoc\.ssh\cloud_tp1 (tpleo)
 ```
 II. Spawn des VMs
 
