@@ -1,0 +1,43 @@
+I. Prérequis
+1. Starting blocks
+2. Une paire de clés SSH
+
+🌞 Déterminer quel algorithme de chiffrement utiliser pour vos clés
+
+🌞 Générer une paire de clés pour ce TP
+
+🌞 Configurer un agent SSH sur votre poste
+
+II. Spawn des VMs
+
+1. Depuis la WebUI
+
+🌞 Connectez-vous en SSH à la VM pour preuve
+
+2. az : a programmatic approach
+
+🌞 Créez une VM depuis le Azure CLI
+
+🌞 Assurez-vous que vous pouvez vous connecter à la VM en SSH sur son IP publique
+
+🌞 Une fois connecté, prouvez la présence...
+
+3. Terraforming planets infrastructures
+
+🌞 Utilisez Terraform pour créer une VM dans Azure
+
+🌞 Prouvez avec une connexion SSH sur l'IP publique que la VM est up
+
+4. Exemple d'utilisation Azure + Terraform
+
+
+
+
+
+
+
+
+
+
+
+
