@@ -50,7 +50,7 @@ Terraform will perform the following actions:
 
   # azurerm_linux_virtual_machine.main will be created
   + resource "azurerm_linux_virtual_machine" "main" {
-      + admin_username                                         = "antnaTerraform"
+      + admin_username                                         = "hugocTerraform"
       + allow_extension_operations                             = (known after apply)
       + bypass_platform_safety_checks_on_user_schedule_enabled = false
       + computer_name                                          = (known after apply)
@@ -81,7 +81,7 @@ Terraform will perform the following actions:
           + public_key = <<-EOT
                 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII+iIGe+eyXVoyRJcxWetFcKmUkkSTc19PLc0gFftdy4 tpleo
             EOT
-          + username   = "antnaTerraform"
+          + username   = "hugocTerraform"
         }
 
       + os_disk {
@@ -273,7 +273,7 @@ az network nic show --resource-group tp1leoTerraform --name vm-nic --query "netw
 - une commande `ssh` fonctionnelle 
 
 ```shell
-$ ssh -i C:\Users\antoi\.ssh\id_tpleo antnaTerraform@51.103.**.**
+$ ssh -i C:\Users\antoi\.ssh\id_tpleo hugocTerraform@51.103.**.**
 The authenticity of host '**.**.**.** (**.**.**.**)' can't be established.
 ED25519 key fingerprint is SHA256:LPwEmlThBb2FXNm6IRAM+8A0RxEQyVjROiYNwPboHgI.
 This key is not known by any other names.
@@ -286,7 +286,7 @@ Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-1089-azure x86_64)
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
-antnaTerraform@cliTerraform:~$
+hugocTerraform@cliTerraform:~$
 ``` 
 
 - changement de port :
@@ -301,7 +301,7 @@ Port 2222
 prouvez que le serveur OpenSSH écoute sur ce nouveau port (avec une commande `ss` sur la VM)
 
 ```shell
-antnaTerraform@cliTerraform:~$ sudo ss -tulnp | grep 2222
+hugocTerraform@cliTerraform:~$ sudo ss -tulnp | grep 2222
 tcp     LISTEN   0        128              0.0.0.0:2222          0.0.0.0:*       users:(("sshd",pid=1718,fd=3))
 tcp     LISTEN   0        128                 [::]:2222             [::]:*       users:(("sshd",pid=1718,fd=4))*
 ```
@@ -309,7 +309,7 @@ tcp     LISTEN   0        128                 [::]:2222             [::]:*      
 prouvez qu'une nouvelle connexion sur ce port 2222/tcp ne fonctionne pas à cause du *NSG*
 
 ```
-$ ssh -i C:\Users\antoi\.ssh\id_tpleo -p 2222 antnaTerraform@**.**.**.**
+$ ssh -i C:\Users\antoi\.ssh\id_tpleo -p 2222 hugocTerraform@**.**.**.**
 ssh: connect to host **.**.**.** port 2222: Connection timed out
 ```
 
