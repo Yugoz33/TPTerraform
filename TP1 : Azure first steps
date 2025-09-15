@@ -15,7 +15,7 @@ I. Prérequis
 - elle doit utiliser l'algorithme que vous avez choisi à l'étape précédente (donc, pas de RSA)
 - elle est protégée par un mot de passe de votre choix
 
-``
+```
 $ ssh-keygen -t ed25519 -C "tpleo"
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (C:\Users\antoi/.ssh/id_ed25519): cloud_tp1
@@ -37,8 +37,7 @@ The key's randomart image is:
 |       *****      |
 |        ***       |
 +----[SHA256]-----+
-
-``
+```
 
 🌞 Configurer un agent SSH sur votre poste
 
