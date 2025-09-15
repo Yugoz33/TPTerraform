@@ -139,7 +139,7 @@ hugoc@cli1:~$
 🌞 Une fois connecté, prouvez la présence...
 - ...du service `walinuxagent.service`
 ```
-antna@cli1:~$ systemctl status walinuxagent.service
+hugoc@cli1:~$ systemctl status walinuxagent.service
 Warning: The unit file, source configuration file or drop-ins of walinuxagent.service changed on disk. Run 'systemctl d>
 ● walinuxagent.service - Azure Linux Agent
      Loaded: loaded (/lib/systemd/system/walinuxagent.service; enabled; vendor preset: enabled)
@@ -162,8 +162,8 @@ Sep 05 11:57:03 cli1 python3[1019]: 2025-09-05T11:57:03.848355Z INFO ExtHandler 
 
 - ...du service `cloud-init.service`
 
-```shell
-antna@cli1:~$ systemctl status cloud-init.service
+```
+hugoc@cli1:~$ systemctl status cloud-init.service
 ● cloud-init.service - Cloud-init: Network Stage
      Loaded: loaded (/lib/systemd/system/cloud-init.service; enabled; vendor preset: enabled)
      Active: active (exited) since Fri 2025-09-05 11:56:51 UTC; 9min ago
