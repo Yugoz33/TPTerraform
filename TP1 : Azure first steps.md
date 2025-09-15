@@ -55,6 +55,28 @@ II. Spawn des VMs
 
 🌞 Connectez-vous en SSH à la VM pour preuve
 
+
+- cette connexion ne doit demander aucun password : votre clé a été ajoutée à votre Agent SSH
+
+```
+>>>>>>> cdc11f89c4d87c9198dd89e9c02f84be9ae34657
+ssh -i C:\Users\antoi\.ssh\cloud_tp1 azureuser@4.178.136.116
+The authenticity of host '4.178.136.116 (4.178.136.116)' can't be established.
+ED25519 key fingerprint is SHA256:eNa4cU5aWvRZjxtykb7CI6OusUDQ6B3JAvZElOT1Eb8.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '4.178.136.116' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-1089-azure x86_64)
+
+...
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+azureuser@cloudTP1:~$
+```
+
+
 2. az : a programmatic approach
 
 🌞 Créez une VM depuis le Azure CLI
