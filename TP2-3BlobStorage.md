@@ -13,16 +13,16 @@
 🌞 **Prouvez que tout est bien configuré, depuis la VM Azure**
 
 ```bash
-antnaTerraform@cliTerraform:~$ azcopy login --identity
+hugocTerraform@cliTerraform:~$ azcopy login --identity
 INFO: Login with identity succeeded.
-antnaTerraform@cliTerraform:~$  azcopy copy "test.txt" "https://terrestock.blob.core.windows.net/terreblob"
+hugocTerraform@cliTerraform:~$  azcopy copy "test.txt" "https://terrestock.blob.core.windows.net/terreblob"
 INFO: Scanning...
 INFO: Autologin not specified.
 INFO: Authenticating to destination using Azure AD
 INFO: Any empty folders will not be processed, because source and/or destination doesn't have full folder support
 
 Job 875bf695-bb00-6b48-6cac-eb8e11ae8d40 has started
-Log file is located at: /home/antnaTerraform/.azcopy/875bf695-bb00-6b48-6cac-eb8e11ae8d40.log
+Log file is located at: /home/hugocTerraform/.azcopy/875bf695-bb00-6b48-6cac-eb8e11ae8d40.log
 
 100.0 %, 1 Done, 0 Failed, 0 Pending, 0 Skipped, 1 Total, 2-sec Throughput (Mb/s): 0.0002
 
@@ -44,7 +44,7 @@ Number of Hardlinks Converted: 0
 Number of Special Files Skipped: 0
 Total Number of Bytes Transferred: 42
 Final Job Status: Completed
-antnaTerraform@cliTerraform:~$ azcopy list "https://terrestock.blob.core.windows.net/terreblob"
+hugocTerraform@cliTerraform:~$ azcopy list "https://terrestock.blob.core.windows.net/terreblob"
 INFO: Autologin not specified.
 INFO: Authenticating to source using Azure AD
 test.txt; Content Length: 42.00 B
@@ -57,7 +57,7 @@ test.txt; Content Length: 42.00 B
 🌞 **Requêtez un JWT d'authentification auprès du service que vous venez d'identifier, manuellement**
 
 ```bash
-antnaTerraform@cliTerraform:~$ curl -H "Metadata:true" "http://169.254.169.254/metadata/identity/oauth2/token?api-version=2021-02-01&resource=https://storage.azure.com/"
+hugocTerraform@cliTerraform:~$ curl -H "Metadata:true" "http://169.254.169.254/metadata/identity/oauth2/token?api-version=2021-02-01&resource=https://storage.azure.com/"
 ```
 
 ```json
@@ -78,7 +78,7 @@ antnaTerraform@cliTerraform:~$ curl -H "Metadata:true" "http://169.254.169.254/m
 169.254.169.254 est une IP link-local ; la table de routage de la VM envoie tout le trafic vers cette plage directement sur l’interface locale, ce qui permet d’atteindre le service IMDS sans passer par Internet.
 
 ```bash
-antnaTerraform@cliTerraform:~$ ip route
+hugocTerraform@cliTerraform:~$ ip route
 default via 10.0.1.1 dev eth0 proto dhcp src 10.0.1.4 metric 100
 10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
 168.63.129.16 via 10.0.1.1 dev eth0 proto dhcp src 10.0.1.4 metric 100
